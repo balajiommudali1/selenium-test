@@ -1,0 +1,31 @@
+
+java -jar selenuim-server-standalone -role hub -host 127.0.0.1 -port 4444 
+
+java -jar selenuim-server-standalone -role hub
+
+
+
+java -jar selenuim-server-standalone -role webdriver -hub http://localhost:4444/grid/register -port 5555 -browser browserName=firefox
+
+java -jar selenuim-server-standalone -role webdriver -hub http://localhost:4444/grid/register -port 5555 -browser browserName=firefox
+
+java -jar selenuim-server-standalone -role webdriver -hub http://localhost:4444/grid/register -port 5555 -browser browserName=firefox -browser browserName=iexplore -browser browserName=chrome 
+
+java -jar selenuim-server-standalone -role webdriver -hub http://localhost:4444/grid/register -port 5555 -browser browserName=firefox -browser browserName=iexplore -browser browserName=chrome.maxInstances=3
+
+
+Setting up chrome and IE DRIVERS
+
+Setting up chrome Driver
+
+-Dwebdriver.chrome.driver=C:\selenium\chromedriver.exe
+
+Setting up IE Driver
+
+-Dwebdriver.chrome.driver=C:\selenium\IEDriverServer.exe
+
+Final Command
+
+java -Dwebdriver.chrome.driver=C:\selenium\chromedriver.exe -Dwebdriver.chrome.driver=C:\selenium\IEDriverServer.exe  -jar selenuim-server-standalone -role webdriver -hub http://localhost:4444/grid/register -port 5555 -browser browserName=firefox -browser browserName=iexplore -browser browserName=chrome.maxInstances=3
+
+chromedriver
